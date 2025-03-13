@@ -8,7 +8,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace GestionCompteBancaire
+namespace CompteBancaireLib
 {
     public class CompteAvecSauvegarde : CompteBancaire
     {

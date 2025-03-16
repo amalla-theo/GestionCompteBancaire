@@ -6,5 +6,10 @@ namespace GUICompteBancaire
         {
             InitializeComponent();
         }
+
+        private void ouvrirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -57,6 +57,7 @@
             ouvrirToolStripMenuItem.Name = "ouvrirToolStripMenuItem";
             ouvrirToolStripMenuItem.Size = new Size(180, 22);
             ouvrirToolStripMenuItem.Text = "Ouvrir";
+            ouvrirToolStripMenuItem.Click += ouvrirToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 

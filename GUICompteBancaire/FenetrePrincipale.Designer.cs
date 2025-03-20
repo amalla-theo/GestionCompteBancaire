@@ -69,6 +69,7 @@
             quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
             quitterToolStripMenuItem.Size = new Size(180, 22);
             quitterToolStripMenuItem.Text = "Quitter";
+            quitterToolStripMenuItem.Click += quitterToolStripMenuItem_Click;
             // 
             // FenetrePrincipale
             // 

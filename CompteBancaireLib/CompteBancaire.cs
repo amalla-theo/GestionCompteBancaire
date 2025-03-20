@@ -10,7 +10,7 @@ namespace CompteBancaireLib
     public class CompteBancaire
     {
         // Proprietes
-        public string Numero { get; protected set; }
+        public string Numero { get; set; }
         public string Proprietaire { get; set; }
 
         [JsonIgnore]
@@ -44,7 +44,7 @@ namespace CompteBancaireLib
 
             // En mode internal, ce n'est pas visible de l'extérieur (comme private ou protected)
             // seul le code du même assembly peut accéder à ce membre.
-            internal set
+            set
             {
                 allTransactions = new List<Transaction>();
                 allTransactions.AddRange(value);

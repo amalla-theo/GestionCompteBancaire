@@ -19,14 +19,14 @@ namespace GUICompteBancaire
             {
                 string fichier = ofd.FileName;
                 String ext = Path.GetExtension(fichier).ToLower();
-                CompteAvecSauvegarde compte;
+                CompteAvecSauvegarde compte = null;
                 try
                 {
-                    if (ext == "csv")
+                    if (ext == ".csv")
                     {
                         compte = CompteAvecSauvegarde.LireCSV(fichier);
                     }
-                    else if (ext == "json")
+                    else if (ext == ".json")
                     {
                         compte = CompteAvecSauvegarde.LireJSON(fichier);
                     }
@@ -34,6 +34,10 @@ namespace GUICompteBancaire
                     {
                         MessageBox.Show("Type de fichier inconu", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+                    GestionCompte nouvelleFenetre = new GestionCompte();
+                    nouvelleFenetre.Fichier = fichier;
+                    nouvelleFenetre.Compte = compte;
+                    nouvelleFenetre.Show();
                 }
                 catch (Exception ex)
                 {

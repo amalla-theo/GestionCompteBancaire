@@ -28,12 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "GestionCompte";
+            listeTransactions = new ListView();
+            columnDate = new ColumnHeader();
+            columnMontant = new ColumnHeader();
+            columnNotes = new ColumnHeader();
+            SuspendLayout();
+            // 
+            // listeTransactions
+            // 
+            listeTransactions.Columns.AddRange(new ColumnHeader[] { columnDate, columnMontant, columnNotes });
+            listeTransactions.FullRowSelect = true;
+            listeTransactions.GridLines = true;
+            listeTransactions.Location = new Point(12, 27);
+            listeTransactions.Name = "listeTransactions";
+            listeTransactions.Size = new Size(396, 411);
+            listeTransactions.TabIndex = 0;
+            listeTransactions.UseCompatibleStateImageBehavior = false;
+            listeTransactions.View = View.Details;
+            // 
+            // columnDate
+            // 
+            columnDate.Text = "Date";
+            columnDate.Width = 120;
+            // 
+            // columnMontant
+            // 
+            columnMontant.Text = "Montant";
+            columnMontant.TextAlign = HorizontalAlignment.Right;
+            columnMontant.Width = 160;
+            // 
+            // columnNotes
+            // 
+            columnNotes.Text = "Notes";
+            columnNotes.Width = 250;
+            // 
+            // GestionCompte
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(listeTransactions);
+            Name = "GestionCompte";
+            Text = "GestionCompte";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private ListView listeTransactions;
+        private ColumnHeader columnDate;
+        private ColumnHeader columnMontant;
+        private ColumnHeader columnNotes;
     }
 }

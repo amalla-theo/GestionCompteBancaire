@@ -20,6 +20,20 @@ namespace GUICompteBancaire
             {
                 _compte = value;
                 Text = _compte.Proprietaire + " : " + _compte.Numero;
+                RemplirLaListe();
+            }
+        }
+
+        private void RemplirLaListe()
+        {
+            foreach(Transaction t in _compte.Transactions)
+            {
+                ListViewItem unElement = new ListViewItem();
+                unElement.Text = t.Date.ToString("dd/MM/yyyy");
+                unElement.SubItems.Add(t.Montant.ToString("N2"));
+                unElement.SubItems.Add(t.Notes);
+                //
+                listeTransactions.Items.Add(unElement);
             }
         }
 

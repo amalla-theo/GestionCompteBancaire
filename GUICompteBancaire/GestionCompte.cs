@@ -15,7 +15,7 @@ namespace GUICompteBancaire
     {
         private CompteAvecSauvegarde _compte;
         public CompteAvecSauvegarde Compte
-    {
+        {
             set
             {
                 _compte = value;
@@ -26,7 +26,7 @@ namespace GUICompteBancaire
 
         private void RemplirLaListe()
         {
-            foreach(Transaction t in _compte.Transactions)
+            foreach (Transaction t in _compte.Transactions)
             {
                 ListViewItem unElement = new ListViewItem();
                 unElement.Text = t.Date.ToString("dd/MM/yyyy");
@@ -35,15 +35,24 @@ namespace GUICompteBancaire
                 //
                 listeTransactions.Items.Add(unElement);
             }
+            if (listeTransactions.Items.Count > 0)
+            {
+                listeTransactions.Items[0].Selected = true;
+            }
         }
 
         public String Fichier { get; set; }
-   
+
 
 
         public GestionCompte()
         {
             InitializeComponent();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

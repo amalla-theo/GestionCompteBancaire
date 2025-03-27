@@ -77,6 +77,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(menuPrincipal);
+            IsMdiContainer = true;
             MainMenuStrip = menuPrincipal;
             Name = "FenetrePrincipale";
             Text = "Gestion Compte Bancaire";

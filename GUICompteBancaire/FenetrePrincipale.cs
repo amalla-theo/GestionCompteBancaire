@@ -4,9 +4,12 @@ namespace GUICompteBancaire
 {
     public partial class FenetrePrincipale : Form
     {
+    
+
         public FenetrePrincipale()
         {
             InitializeComponent();
+            
         }
 
         private void ouvrirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -34,10 +37,27 @@ namespace GUICompteBancaire
                     {
                         MessageBox.Show("Type de fichier inconu", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    GestionCompte nouvelleFenetre = new GestionCompte();
-                    nouvelleFenetre.Fichier = fichier;
-                    nouvelleFenetre.Compte = compte;
-                    nouvelleFenetre.Show();
+
+                    bool found = false;
+                    foreach (GestionCompte gc in this.MdiChildren)
+                    {
+                        if ( gc.Fichier == fichier )
+                        {
+                            found = true;
+                            gc.Activate();
+                            break;
+
+                        }
+                    }
+                    if (!found)
+                    {
+                        GestionCompte nouvelleFenetre = new GestionCompte();
+                        nouvelleFenetre.Fichier = fichier;
+                        nouvelleFenetre.Compte = compte;
+                        nouvelleFenetre.MdiParent = this;
+                        nouvelleFenetre.Show();
+                        
+                    }
                 }
                 catch (Exception ex)
                 {

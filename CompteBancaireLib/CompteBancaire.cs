@@ -70,6 +70,10 @@ namespace CompteBancaireLib
         // Methodes
         public void FaireDepot(decimal montant, DateTime date, string note)
         {
+            if (allTransactions.Count > 0)
+            {
+                allTransactions[0].Date = date;
+            }
             //(#2)
             if (montant <= 0)
             {

@@ -41,7 +41,7 @@
             menuPrincipal.Items.AddRange(new ToolStripItem[] { fichierToolStripMenuItem });
             menuPrincipal.Location = new Point(0, 0);
             menuPrincipal.Name = "menuPrincipal";
-            menuPrincipal.Size = new Size(800, 24);
+            menuPrincipal.Size = new Size(795, 24);
             menuPrincipal.TabIndex = 0;
             menuPrincipal.Text = "menuStrip1";
             // 
@@ -55,19 +55,19 @@
             // ouvrirToolStripMenuItem
             // 
             ouvrirToolStripMenuItem.Name = "ouvrirToolStripMenuItem";
-            ouvrirToolStripMenuItem.Size = new Size(180, 22);
+            ouvrirToolStripMenuItem.Size = new Size(111, 22);
             ouvrirToolStripMenuItem.Text = "Ouvrir";
             ouvrirToolStripMenuItem.Click += ouvrirToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(177, 6);
+            toolStripSeparator1.Size = new Size(108, 6);
             // 
             // quitterToolStripMenuItem
             // 
             quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            quitterToolStripMenuItem.Size = new Size(180, 22);
+            quitterToolStripMenuItem.Size = new Size(111, 22);
             quitterToolStripMenuItem.Text = "Quitter";
             quitterToolStripMenuItem.Click += quitterToolStripMenuItem_Click;
             // 
@@ -75,7 +75,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(795, 553);
             Controls.Add(menuPrincipal);
             IsMdiContainer = true;
             MainMenuStrip = menuPrincipal;
